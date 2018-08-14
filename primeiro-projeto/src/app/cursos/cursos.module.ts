@@ -10,9 +10,9 @@ import { CursosComponent } from './cursos.component';
   declarations: [CursosComponent],
 
   exports: [
-    CursosComponent 
+    CursosComponent
   ],
-   
+
   providers: [CursosService]
 })
 export class CursosModule { }
