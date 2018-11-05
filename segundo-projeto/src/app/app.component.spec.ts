@@ -14,7 +14,7 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   }));
   it(`should have as title 'segundo-projeto'`, async(() => {
-    const fixture = new AppComponent;
+    const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('segundo-projeto');
   }));
