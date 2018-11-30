@@ -1,3 +1,17 @@
-<p>
-  data-biding works!
-</p>
+<section class='property-binding'>
+  <article>
+    <h3> Interpolação/interpolação</h3>
+    <p>String rendenderizada com interpolação: {{ url }}</p>
+    <p>Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
+    <p>Outro resultado com soma: {{ 1 + 1 + getValor()}}</p>
+    <p>Curso Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }}</p>
+  </article>
+
+  <!--  O property binding funciona com uma tag html, seguida de uma propriedade definida pelo [], seguido da variável ou metódo
+  que você queira mostra... exemplo seguite com img segue esse raciocínio. -->
+  <article>
+    <h3> Property Binding</h3>
+    <img src="{{ urlImagem }}">
+    <img [src]="urlImagem">
+  </article>
+</section>
