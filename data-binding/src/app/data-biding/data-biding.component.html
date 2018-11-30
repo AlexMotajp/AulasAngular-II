@@ -1,5 +1,5 @@
 <section class='property-binding'>
-  <article>
+ <!--  <article>
     <h3> Interpolação/interpolação</h3>
     <p>String rendenderizada com interpolação: {{ url }}</p>
     <p>Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
@@ -7,11 +7,55 @@
     <p>Curso Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }}</p>
   </article>
 
-  <!--  O property binding funciona com uma tag html, seguida de uma propriedade definida pelo [], seguido da variável ou metódo
-  que você queira mostra... exemplo seguite com img segue esse raciocínio. -->
+    O property binding funciona com uma tag html, seguida de uma propriedade definida pelo [], seguido da variável ou metódo
+  que você queira mostra... exemplo seguite com img e o [src] seguem esse raciocínio.
   <article>
     <h3> Property Binding</h3>
     <img src="{{ urlImagem }}">
     <img [src]="urlImagem">
+  </article> -->
+
+
+
+  <article>
+    <h3> Class e Style Binding</h3>
+    <div>
+      Selecione uma classe:
+      <!-- A tag select, cria uma lista Drop-down. Uma lista suspensa que é definida pelos options  -->
+      <!-- Criando uma variável local no template dentro de uma tag. Var = Classe  -->
+      <select #classe (change)= "0">
+        <option value="alert-success"> Sucesso </option>
+        <option value="alert-info"> Info </option>
+        <option value="alert-warning"> Alerta </option>
+        <option value="alert-danger"> Erro </option>
+      </select>
+      <br><br>
+
+      <div class="alert " role="alert">
+        Texto colorido conforme valor do combobox.
+      </div>
+
+      <div class="alert " role="alert"
+      [class.alert-success]="classe.value == 'alert-success'">
+      Sucesso
+    </div>
+      <div class="alert " role="alert"
+      [class.alert-info]="classe.value == 'alert-info'">
+      Info
+    </div>
+      <div class="alert " role="alert"
+      [class.alert-warning]="classe.value == 'alert-warning'">
+      Alerta
+    </div>
+      <div class="alert " role="alert"
+      [class.alert-danger]="classe.value == 'alert-danger'">
+      Erro
+    </div>
+
+    <div class="alert alert-danger" role="alert"
+    [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'">
+    Esse texo somente aparece em caso de erro.
+  </div>
+    </div>
   </article>
 </section>

@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DataBidingComponent implements OnInit {
 
   url: String = 'http://loiane.com';
-  cursoAngular: boolean = true;
+  cursoAngular: Boolean = true;
   urlImagem = 'https://picsum.photos/400/200/?random';
   getValor() {
     return 1;
