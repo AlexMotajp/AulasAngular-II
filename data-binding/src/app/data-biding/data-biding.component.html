@@ -1,5 +1,5 @@
-<section class='property-binding'>
- <!--  <article>
+<!-- <section class='property-binding'>
+  <article>
     <h3> Interpolação/interpolação</h3>
     <p>String rendenderizada com interpolação: {{ url }}</p>
     <p>Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
@@ -17,12 +17,12 @@
 
 
 
-  <article>
+  <!-- <article>
     <h3> Class e Style Binding</h3>
     <div>
       Selecione uma classe:
-      <!-- A tag select, cria uma lista Drop-down. Uma lista suspensa que é definida pelos options  -->
-      <!-- Criando uma variável local no template dentro de uma tag. Var = Classe  -->
+       A tag select, cria uma lista Drop-down. Uma lista suspensa que é definida pelos options
+       Criando uma variável local no template dentro de uma tag. Var = Classe
       <select #classe (change)= "0">
         <option value="alert-success"> Sucesso </option>
         <option value="alert-info"> Info </option>
@@ -31,7 +31,7 @@
       </select>
       <br><br>
 
-      <div class="alert " role="alert">
+      <div class="alert {{ classe.value }}" role="alert">
         Texto colorido conforme valor do combobox.
       </div>
 
@@ -58,4 +58,25 @@
   </div>
     </div>
   </article>
+</section>
+-->
+
+<section class="event-binding">
+  <article>
+    <h3>Event binding</h3>
+    <div>
+      <button class= "btn btn-primary" (click)="botaoClicado()" >Me clique!</button>
+
+      <br><br>
+
+      <input type="text"
+      (keyup)="onKeyUp($event)"
+      (keyup.enter)="salvarValor($event.target.value)"/>
+
+
+      <p> Valor Salvo: {{ valorSalvo }}</p>
+      <p>Valor atual: {{ valorAtual }}</p>
+    </div>
+  </article>
+
 </section>
