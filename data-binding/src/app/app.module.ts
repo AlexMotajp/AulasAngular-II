@@ -1,16 +1,25 @@
+import { MeuFormModule } from './meu-form/meu-form.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
 
 import { AppComponent } from './app.component';
 import { DataBidingComponent } from './data-biding/data-biding.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
-    DataBidingComponent
+    DataBidingComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    MeuFormModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
