@@ -15,12 +15,7 @@ export class DataBidingComponent implements OnInit {
   valorAtual: String = '';
   valorSalvo: any;
 
-  nome: String = 'abc';
-
-  pessoa: any = {
-    nome: 'def',
-    idade: 20
-  };
+  nomeDoCurso: String = 'Angular 2';
 
   getValor() {
     return 1;
@@ -44,6 +39,10 @@ export class DataBidingComponent implements OnInit {
 
   onMouseOverOut() {
     this.isMouseOver = !this.isMouseOver;
+  }
+
+  onMudouValor(evento) {
+    console.log(evento.novoValor);
   }
 
   constructor() { }
